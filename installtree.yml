@@ -1,5 +1,5 @@
 - name: Echo 
-  hosts: 192.168.88.87
+  hosts: 192.168.88.22
   connection: local
 
   tasks:
