@@ -1,15 +1,8 @@
-- name: Install tree on Ubuntu
-  hosts: 192.168.88.22
-  become: yes  
+- name: Echo 
+  hosts: 127.0.0.1
+  connection: local
 
   tasks:
-    - name: Update apt package cache
-      apt:
-        update_cache: yes
-      become: yes
-
-    - name: Install tree package
-      apt:
-        name: tree
-        state: present
-      become: yes
+  - name: Print debug message
+    debug:
+      msg: Hello, world!
