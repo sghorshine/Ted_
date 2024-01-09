@@ -1,6 +1,6 @@
 ---
 - name: Install tree on Ubuntu
-  hosts: 192.168.88.182
+  hosts: 192.168.88.22
   become: yes  
 
   tasks:
