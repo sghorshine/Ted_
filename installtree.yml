@@ -2,7 +2,7 @@
 - hosts: 192.168.88.22
   tasks:
     - name: Installing mysql
-      apt: name=mysql state=present
+      apt: name=mysql state=latest
     - name: Starting mysql Service
       service:
         name: mysql
