@@ -2,8 +2,8 @@
 - hosts: 192.168.88.22
   tasks:
     - name: STOPING MYSQL
-        service: 
-           name: mysql
-           state: stopped
+      service:
+        name: mysql
+        state: stopped
     - name: unInstalling mysql
       apt: name=mysql-server state=absent
