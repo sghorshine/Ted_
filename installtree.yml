@@ -4,6 +4,6 @@
     - name: STOPING MYSQL
         service: 
            name: mysql
-           state: stoped
+           state: stopped
     - name: unInstalling mysql
       apt: name=mysql-server state=absent
