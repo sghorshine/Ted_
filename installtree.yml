@@ -1,8 +1,11 @@
 - hosts: 192.168.88.22
   tasks:
-    - name: REMOVE nginx
-      apt-purge: name=nginx state=latest
-    - name: stop nginx
+    - name: STOP nginx
       service:
           name: nginx
-          state: stoped
+          state: stopped
+    - name: Uninstalling nginx
+      apt: name=nginx state=absent
+  tasks:
+     - name: Installing Nano
+       apt: name=nano state=present
