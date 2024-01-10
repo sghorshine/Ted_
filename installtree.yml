@@ -1,11 +1,9 @@
 ---
 - hosts: 192.168.88.22
   tasks:
-    - name: Installing mysql
-      apt: name=mysql-server state=latest
-    - name: Starting mysql Service
-      service:
-        name: mysql
-        state: started
-    - name: Uninstalling Nano
-      apt: name=nano state=absent
+    - name: STOPING MYSQL
+        service: 
+           name: mysql
+           state: stoped
+    - name: unInstalling mysql
+      apt: name=mysql-server state=absent
