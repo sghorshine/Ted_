@@ -1,9 +1,7 @@
 ---
-- hosts: 192.168.88.22
+- name: Echo Hello World
+  hosts: 192.168.88.22
+  gather_facts: false
   tasks:
-    - name: STOPING MYSQL
-      service:
-        name: mysql
-        state: stopped
-    - name: unInstalling mysql
-      apt: name=mysql-server state=absent
+    - name: Echo Hello World
+      command: echo "Hello, World!"
