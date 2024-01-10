@@ -7,6 +7,6 @@
       service:
         name: mysql
         state: started
-  task:
+  tasks:
     - name: Uninstalling Nano
       apt: name=nano state=absent
