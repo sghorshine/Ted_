@@ -1,11 +1,12 @@
+---
 - hosts: 192.168.88.22
   tasks:
-    - name: STOP nginx
+    - name: Installing mysql
+      apt: name=mysql state=present
+    - name: Starting mysql Service
       service:
-          name: nginx
-          state: stopped
-    - name: Uninstalling nginx
-      apt: name=nginx state=absent
+        name: mysql
+        state: started
   task:
-     - name: Installing Nano
-       apt: name=nano state=present
+    - name: Uninstalling Nano
+      apt: name=nano state=absent
