@@ -1,5 +1,5 @@
 - name: Echo 
-  hosts: 192.168.88.22
+  hosts: all
   tasks:
   - name: Print debug message
     debug:
