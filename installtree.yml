@@ -1,6 +1,6 @@
 ---
 - name: Echo Hello World
-  hosts: 192.168.88.22
+  hosts: 192.168.88.87
   gather_facts: false
   tasks:
     - name: Echo Hello World
