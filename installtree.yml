@@ -16,7 +16,7 @@
      become: yes
      fetch:
       src: /tmp/apt_update_output.txt
-      dest: /tmp/
+      dest: /home/fintech/
       conn_host: 192.168.88.244
       flat: yes
      delegate_to: localhost
