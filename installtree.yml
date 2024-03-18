@@ -1,6 +1,6 @@
 ---
 - name: APT UPDATE ON 192.168.88.248 SERVER
-  host: 192.168.88.248
+  hosts: 192.168.88.248
   ansible.builtin.apt:
     name: "*"
     state: latest
