@@ -1,6 +1,7 @@
 ---
-- name: Echo Hello World
-  hosts: 192.168.88.208
+- name: APT UPDATE ON 192.168.88.248 SERVER
+  hosts: 192.168.88.248
+  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
   
   tasks:
     - name: Echo Hello World
