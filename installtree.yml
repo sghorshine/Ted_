@@ -1,10 +1,19 @@
 ---
 - name: APT UPDATE ON 192.168.88.248 SERVER
   hosts: 192.168.88.248
-  ansible.builtin.apt:
-    name: "*"
-    state: latest
-  
-  tasks:
-    - name: Echo Hello World
-      command: echo "Hello, World!"
+  gather_facts: no
+
+  task:
+   - name: Update APT REPO
+     become: yes
+     apt:
+      update_cache: yes
+   - name: Run apt update and save output to location
+     become: yes
+     shell: apt update > /tmp/apt_update_output.txt
+
+   - name: Fetch apt update output to local machine
+     fetch:
+      src: /tmp/apt_update_output.txt
+      dest: /home/fintech/
+      flat: yes
