@@ -16,5 +16,5 @@
      become: yes
      fetch:
       src: /tmp/apt_update_output.txt
-      dest: /tmp/
+      dest: /tmp/apt_update_output.txt
       flat: yes
