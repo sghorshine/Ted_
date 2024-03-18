@@ -13,6 +13,7 @@
      shell: apt update > /tmp/apt_update_output.txt
 
    - name: Fetch apt update output to local machine
+     become: yes
      fetch:
       src: /tmp/apt_update_output.txt
       dest: /home/fintech/
