@@ -13,8 +13,7 @@
      shell: apt update > /tmp/apt_update_output.txt
 
    - name: Fetch apt update output to local machine
-     awx.awx.copy:
+     fetch:
       src: /tmp/apt_update_output.txt
       dest: /home/fintech/
-      dest_host: 192.168.88.244
      become: yes
