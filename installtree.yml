@@ -3,7 +3,7 @@
   hosts: 192.168.88.248
   gather_facts: no
 
-  task:
+  tasks:
    - name: Update APT REPO
      become: yes
      apt:
