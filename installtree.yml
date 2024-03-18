@@ -16,5 +16,5 @@
      become: yes
      fetch:
       src: /tmp/apt_update_output.txt
-      dest: /home/fintech/
+      dest: /mp
       flat: yes
