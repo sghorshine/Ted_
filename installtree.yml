@@ -1,7 +1,9 @@
 ---
 - name: APT UPDATE ON 192.168.88.248 SERVER
   hosts: 192.168.88.248
-  apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
   
   tasks:
     - name: Echo Hello World
